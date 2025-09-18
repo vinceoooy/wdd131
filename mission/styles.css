@@ -1,0 +1,87 @@
+/* Reset default margins */
+body {
+  font-family: Georgia, serif;
+  margin: 40px;
+  background-color: #fff;
+  color: #000;
+}
+
+.container {
+  border: 1px solid #ddd;
+  padding: 45px;
+  max-width: 480px;
+  margin: auto;
+  background-color: #fff;
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #3386C3;
+  margin-top: 25px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+em {
+  font-style: italic;
+}
+
+ol {
+  margin-top: 15px;
+  padding-left: 20px;
+  font-size: 15px;
+}
+
+ol li {
+  margin-bottom: 12px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* center horizontally */
+  margin-top: 40px;
+}
+
+.byu {
+  font-family: "Ringside Narrow", sans-serif;
+  font-size: 48px;          /* adjust size as needed */
+  font-weight: 1000;
+  color: #426dc3;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+/* line BETWEEN BYU and IDAHO */
+.byu::after {
+  content: "";
+  display: block;
+  width: 115px;              /* length of the line */
+  height: 1px;              /* thin line */
+  background-color: #3469A9;
+  margin: 8px auto;         /* centers the line and gives small gap */
+}
+
+.idaho {
+  margin-top: 2px;      
+  font-size: 25px;
+  font-weight: 400;
+  color: #3469A9;
+  letter-spacing: 7px;      /* optional: spread letters slightly */
+}
