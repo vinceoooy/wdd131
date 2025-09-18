@@ -1,0 +1,82 @@
+/* dom-basics.css */
+
+/* Reset some defaults for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Main heading */
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Section styling */
+section {
+  background: #ffffff;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Subheadings */
+h2 {
+  color: #16a085;
+  margin-bottom: 10px;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 10px;
+}
+
+/* ID styling (p2) */
+#p2 {
+  color: #2980b9;
+  font-weight: bold;
+}
+
+/* Class styling (.green) */
+.green {
+  color: #27ae60;
+  font-style: italic;
+}
+
+/* Image styling */
+img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* List styling */
+ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+ul li {
+  margin: 5px 0;
+}
+
+/* Added section from JS */
+section:last-of-type {
+  border: 2px dashed #16a085;
+  background: #ecf9f6;
+}
