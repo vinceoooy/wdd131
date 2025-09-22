@@ -73,7 +73,7 @@ ol li {
   display: block;
   width: 115px;             
   height: 1px;             
-  background-color: #3469A9;
+  background-color: var(--line-color, #3469A9); /* use variable */
   margin: 8px auto;        
 }
 
