@@ -36,5 +36,7 @@ function changeTheme() {
     container.style.borderColor = '';
     byu.style.color = '';
     idaho.style.color = '';
+    h2.style.color = '';
+    document.documentElement.style.setProperty('--line-color', '');
   }
 }
