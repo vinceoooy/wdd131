@@ -22,10 +22,18 @@ nav {
   margin-top: 0.5rem;
 }
 
+nav.menu:not(.hide) {
+    display: block;
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
 nav a {
+  display: block; 
   color: white;
   text-decoration: none;
   margin: 0 0.5rem;
+  padding: 0.5rem 0;
 }
 
 .menu-btn {
@@ -90,40 +98,38 @@ dialog {
 }
 
 dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.699);
 }
 
 .viewer-content {
   position: relative; 
   display: flex; 
-
   width: fit-content;
   height: fit-content;
+  justify-content: center;
+  align-items: center;
   max-width: 90%; 
-  max-height: 90vh;
 }
 
 .viewer-content img {
-  max-width: 100%; 
-  max-height: 100%; 
-  width: auto; 
-  height: auto;
+  position: relative;
+  width: 50%; 
   object-fit: contain;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   margin: 0; 
 }
 
 .close-viewer {
-  position: relative;
-  top: -24px;
+  position:sticky;
+  bottom: 100%;
   padding: 0;
   width: 28px; 
   height: 28px;
   line-height: 28px; 
-  text-align: center;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+  z-index: 10;
 }
 
 .close-viewer:hover {
@@ -131,20 +137,25 @@ dialog::backdrop {
 }
 
 
-@media (min-width: 600px) {
+@media screen and (min-width: 700px) {
+  nav a {
+    margin: 0 1rem;
+  }
   .gallery {
-    grid-template-columns: repeat(2, 300px); 
+    grid-template-columns: 1fr 1fr;
   }
 }
-
 @media (min-width: 900px) {
   nav {
-    display: block;
+    display: block !important
   }
   .menu-btn {
     display: none; 
   }
   .gallery {
     grid-template-columns: repeat(3, 300px); 
+  }
+    nav a {
+    display: inline; 
   }
 }

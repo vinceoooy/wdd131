@@ -22,6 +22,7 @@ window.addEventListener("resize", handleResize);
 
 function openViewer(imageSrc, imageAlt) {
     const dialog = document.createElement('dialog');
+
     const largeSrc = imageSrc.replace('-sm', '-lg'); 
 
     dialog.innerHTML = `
