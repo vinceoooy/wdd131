@@ -96,7 +96,7 @@ dialog::backdrop {
 .viewer-content {
   position: relative; 
   display: flex; 
-  
+
   width: fit-content;
   height: fit-content;
   max-width: 90%; 
