@@ -1,86 +1,50 @@
 body {
-  font-family: Georgia, serif;
-  margin: 40px;
-  background-color: #fff;
-  color: #000;
-}
-
-.container {
-  border: 1px solid #ddd;
-  padding: 45px;
-  max-width: 480px;
-  margin: auto;
-  background-color: #fff;
-}
-
-h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  line-height: 1.5;
+  padding: 35px 0;
   text-align: center;
-  font-size: 28px;
-  letter-spacing: 2px;
-  margin-bottom: 5px;
 }
 
-h2 {
-  text-align: center;
-  font-size: 14px;
-  letter-spacing: 2px;
-  color: #3386C3;
-  margin-top: 25px;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 10px;
+
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 50px 158px;
+  border: 2px solid #E1E1E1;
 }
 
-p {
-  font-size: 15px;
-  line-height: 1.6;
-  margin-top: 20px;
+.title h1 {
+  text-transform: uppercase;  
+  margin-bottom: 15px;
+  font-weight: normal;
+  letter-spacing: 4px;
 }
 
-em {
-  font-style: italic;
+.title h2 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #006EB6;
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 46px;
+  border-bottom: 2px solid #E1E1E1;
 }
 
-ol {
-  margin-top: 15px;
-  padding-left: 20px;
-  font-size: 15px;
+p, ol {
+  text-align: left;
+  margin-bottom: 20px;
 }
 
-ol li {
-  margin-bottom: 12px;
+.does-list {
+  padding-left: 40px;
+}
+.does-list li {
+  margin-bottom: 20px; 
 }
 
 .logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;     
-  margin-top: 40px;
-}
-
-.byu {
-  font-family: "Ringside Narrow", sans-serif;
-  font-size: 48px;          
-  font-weight: 1000;
-  color: #426dc3;
-  margin: 0;
-  line-height: 1;
-  letter-spacing: 1px;
-}
-
-/*
-.byu::after {
-  content: "";
+  width: 150px;
   display: block;
-  width: 115px;             
-  height: 1px;             
-  background-color: var(--line-color, #3469A9); 
-  margin: 8px auto;        
-} */
-
-.idaho {
-  margin-top: 2px;        
-  font-size: 25px;
-  font-weight: 400;
-  color: #3469A9;
-  letter-spacing: 7px;      
+  margin: 60px auto 5px auto;
 }
