@@ -1,42 +1,29 @@
 let selectElem = document.querySelector('select');
+let logo = document.querySelector('.logo');
 let body = document.body;
-let container = document.querySelector('.container');
-let byu = document.querySelector('.byu');
-let idaho = document.querySelector('.idaho');
-let h2 = document.querySelector('h2');
+
 selectElem.addEventListener('change', changeTheme);
 
 function changeTheme() {
-  let current = selectElem.value;
+    let current = selectElem.value;
 
-  if (current === 'dark') {
-    body.style.backgroundColor = '#333';
-    body.style.color = 'white';
-    container.style.backgroundColor = '#444';
-    container.style.borderColor = '#555';
-    byu.style.color = 'white';  
-    idaho.style.color = 'white';
-    h2.style.color = '#87cefa';
-    document.documentElement.style.setProperty('--line-color', 'white');
-  } 
-  else if (current === 'light') {
-    body.style.backgroundColor = ''; 
-    body.style.color = '';
-    container.style.backgroundColor = '';
-    container.style.borderColor = '';
-    byu.style.color = ''; 
-    idaho.style.color = '';
-    h2.style.color = '';
-    document.documentElement.style.setProperty('--line-color', '');
-  } 
-  else {
-    body.style.backgroundColor = '';
-    body.style.color = '';
-    container.style.backgroundColor = '';
-    container.style.borderColor = '';
-    byu.style.color = '';
-    idaho.style.color = '';
-    h2.style.color = '';
-    document.documentElement.style.setProperty('--line-color', '');
-  }
+    if (current === 'dark') {
+        // Add dark theme styles
+        body.classList.add('dark');
+        body.style.backgroundColor = '#333';  // dark gray background
+        body.style.color = 'white';           // white text
+        logo.src = 'logo_dark.png';           // switch to dark logo
+    } else if (current === 'light') {
+        // Switch back to light theme
+        body.classList.remove('dark');
+        body.style.backgroundColor = '#FFFFFF';
+        body.style.color = '#000000';
+        logo.src = 'logo.webp';
+    } else {
+        // Default (Choose Mode selected)
+        body.classList.remove('dark');
+        body.style.backgroundColor = '';
+        body.style.color = '';
+        logo.src = 'logo.webp';
+    }
 }

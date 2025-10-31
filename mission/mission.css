@@ -48,3 +48,14 @@ p, ol {
   display: block;
   margin: 60px auto 5px auto;
 }
+
+body.dark .title h2 {
+  color: #5AB9EA; 
+}
+
+#theme-button{
+  position: absolute;
+  margin: 1rem 1rem;
+  left: 0px;
+  top: 0px;
+}
