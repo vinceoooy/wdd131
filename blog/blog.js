@@ -37,4 +37,45 @@ const articles = [
 		genre: "Fantasy",
 		stars: "⭐⭐⭐⭐⭐"
 	}
-]
+];
+
+function addNewArticle(selector, article) {
+	// create new article element
+	const newArticle = document.createElement("article");
+	newArticle.classList.add("article");
+	// add details of the article
+	addDetail(newArticle, article);
+	addBook(newArticle, article);
+	// add the new article into HTML
+	const element = document.querySelector(selector);
+	element.appendChild(newArticle);
+}
+
+function addDetail(element, article) {
+	element.innerHTML += detailTemplate(article);
+}
+
+function detailTemplate(article) {
+	return `<div class="detail">
+    	<p>${article.date}</p>
+    	<p>${article.ages}</p>
+    	<p>${article.genre}</p>
+    	<p>${article.stars}</p>
+    </div>`;
+}
+
+function addBook(element, article) {
+	element.innerHTML += bookTemplate(article);
+}
+
+function bookTemplate(article) {
+	return `<div class="book">
+    	<h2>${article.title}</h2>
+        <img src="${article.imgSrc}" alt="${article.imgAlt}">
+        <p>${article.description} <a href="">Read More...</a></p>
+    </div>`;
+}
+
+articles.forEach(article => {
+	addNewArticle(".books", article);
+});
