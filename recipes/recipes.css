@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
-
 :root {
     --primary-color: #1B98E0;
     --secondary-color: #59c3c3;
@@ -30,7 +29,6 @@ header h1 {
     max-height: 100px;
 }
 
-/* SEARCH AREA */
 #search_row {
     display: flex;
     max-width: 1250px;
@@ -46,7 +44,6 @@ header h1 {
     height: 16px;
 }
 
-/* MAIN RECIPE CONTAINER */
 #recipe {
     border: 1px solid #333;
     padding: 20px;
@@ -54,7 +51,6 @@ header h1 {
     max-width: 1250px;
 }
 
-/* IMAGE + TEXT side-by-side */
 .recipe-top {
     display: flex;
     flex-direction: row;
@@ -73,7 +69,6 @@ header h1 {
     justify-content: center;
 }
 
-/* LABEL */
 .recipe-label {
     padding: 5px 10px;
     border: 2px solid black;
@@ -81,26 +76,22 @@ header h1 {
     max-width: fit-content;
 }
 
-/* TITLE */
 .recipe-content h1 {
     font-family: "Amatic SC", sans-serif;
     font-size: 3em;
     margin-bottom: 4px;
 }
 
-/* RATING */
 .rating {
     display: flex;
     gap: 5px;
     font-size: 1.5rem;
 }
 
-/* DESCRIPTION */
 .recipe-description {
     font-size: 1.3em;
 }
 
-/* DETAILS DROPDOWN */
 .recipe-details {
     margin-top: 20px;
     padding-top: 10px;
@@ -112,7 +103,6 @@ header h1 {
     margin-left: 20px;
 }
 
-/* FOOTER */
 footer {
     display: flex;
     justify-content: space-between;
@@ -132,7 +122,6 @@ footer img {
     height: 50px;
 }
 
-/* RESPONSIVE */
 @media screen and (max-width: 960px) {
     .recipe-top {
         flex-direction: column;

@@ -1,7 +1,5 @@
-// Global recipe cache
 const recipeBook = [];
 
-// Load recipes on page load
 document.addEventListener("DOMContentLoaded", () => {
     (async () => {
         const recipes = (await import("./recipes.mjs")).default;
@@ -17,12 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// RANDOM NUMBER
 function randNum(n) {
     return Math.floor(Math.random() * n);
 }
 
-// TEMPLATE — FINAL WORKING VERSION
 function recipeTemplate(recipe) {
     return `
       <div class="recipe-top">
@@ -71,25 +67,21 @@ function recipeTemplate(recipe) {
     `;
 }
 
-// Populate recipe on page
 function populateRecipes(recipes) {
     const container = document.getElementById("recipe");
     container.innerHTML = recipeTemplate(recipes[0]);
 
-    // Enable expand/collapse
     container.addEventListener("click", () => {
         const details = container.querySelector(".recipe-details");
         details.style.display = details.style.display === "none" ? "block" : "none";
     });
 }
 
-// Random recipe on load
 function initialRandomRecipe(recipes) {
     const randomRecipe = recipes[randNum(recipes.length)];
     populateRecipes([randomRecipe]);
 }
 
-// FILTER RECIPES
 function filterRecipes(query) {
     if (recipeBook.length === 0) return;
 
