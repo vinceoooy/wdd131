@@ -1,12 +1,13 @@
- @import url("https://fonts.googleapis.com/css2?family=family=Amatic+SC&display=swap");
-    :root {
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+
+:root {
     --primary-color: #1B98E0;
     --secondary-color: #59c3c3;
     --text-dark: #333;
     --text-light: #ebebeb;
-    --primary-font: Arial, Helvetica,sans-serif;
+    --primary-font: Arial, Helvetica, sans-serif;
     --secondary-font: "Amatic SC";
-    }
+}
 
 body {
     margin: 30px;
@@ -25,75 +26,93 @@ header h1 {
     font-size: 3em;
 }
 
-hr {
-    max-width: 1300px;
-}
-
 #logo {
     max-height: 100px;
 }
 
+/* SEARCH AREA */
 #search_row {
     display: flex;
     max-width: 1250px;
     margin: auto;
-
-    img {
-        height: 16px;
-    }
-
-    input {
-        width: 100%;
-        padding: 7px;
-    }
 }
 
+#search_row input {
+    width: 100%;
+    padding: 7px;
+}
+
+#search_row button img {
+    height: 16px;
+}
+
+/* MAIN RECIPE CONTAINER */
 #recipe {
     border: 1px solid #333;
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    gap: 20px;
     padding: 20px;
     margin: auto;
     max-width: 1250px;
-
-    #recipimg {
-        max-height: 357px;
-        max-width: 475px;
-        object-fit: cover;
-    }
-
-    h1 {
-        font-family: "Amatic SC", sans-serif;
-        font-size: 3em;
-        margin-bottom: 4px;
-    }
-
-    .recipe-description {
-        font-size: 1.3em;
-    }
-
-    .recipe-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .recipe-label {
-        padding: 5px 10px;
-        border: 2px solid black;
-        font-size: 1.3rem;
-        max-width: fit-content;
-    }
-
-    .rating {
-        display: flex;
-        gap: 5px;
-        font-size: 1.5rem;
-    }
 }
 
+/* IMAGE + TEXT side-by-side */
+.recipe-top {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#recipimg {
+    max-height: 357px;
+    max-width: 475px;
+    object-fit: cover;
+}
+
+.recipe-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* LABEL */
+.recipe-label {
+    padding: 5px 10px;
+    border: 2px solid black;
+    font-size: 1.3rem;
+    max-width: fit-content;
+}
+
+/* TITLE */
+.recipe-content h1 {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 3em;
+    margin-bottom: 4px;
+}
+
+/* RATING */
+.rating {
+    display: flex;
+    gap: 5px;
+    font-size: 1.5rem;
+}
+
+/* DESCRIPTION */
+.recipe-description {
+    font-size: 1.3em;
+}
+
+/* DETAILS DROPDOWN */
+.recipe-details {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.recipe-details ul,
+.recipe-details ol {
+    margin-left: 20px;
+}
+
+/* FOOTER */
 footer {
     display: flex;
     justify-content: space-between;
@@ -102,24 +121,21 @@ footer {
     padding: 10px 20px;
     max-width: 1250px;
     margin: auto;
-
-    .social {
-        display: flex;
-        gap: 15px;
-        align-items: center;
-
-        img {
-            height: 50px;
-        }
-    }
 }
 
+footer .social {
+    display: flex;
+    gap: 15px;
+}
+
+footer img {
+    height: 50px;
+}
+
+/* RESPONSIVE */
 @media screen and (max-width: 960px) {
-    #recipe {
+    .recipe-top {
         flex-direction: column;
-        text-align: left;
-        padding: 10px;
-        align-items: flex-start;
     }
 
     #recipimg {
@@ -127,41 +143,18 @@ footer {
         max-height: 300px;
     }
 
-    .recipe-content {
-        max-width: 100%;
-        margin-bottom: 50px;
-    }
-
     .recipe-description {
         display: none;
-    }
-
-    footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 10px;
     }
 }
 
 @media screen and (max-width: 600px) {
     #search_row {
-        flex-direction: row;
-        align-items: center;
         padding: 0 10px;
-
-        img {
-            height: 24px;
-        }
     }
 
     #recipe {
         width: 90%;
-        margin: auto;
-
-        .recipe-content {
-            margin-bottom: 50px;
-        }
     }
 
     header {
