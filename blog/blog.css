@@ -1,86 +1,90 @@
-header, footer {
+@import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+:root {
+--primary-color: #EFC69B;
+--secondary-color: #AF1B3F;
+--text-dark: #473144;
+--text-light: #ebebeb;
+--primary-font: Helvetica, Arial, sans-serif;
+--secondary-font:  Lora, Impact, serif;
+}
+
+body {
+    color: var(--text-dark);
+    font-family: var(--primary-font);
+}
+
+a, h2 {
+    color: var(--secondary-color);
+}
+
+h1, h2 {
+    font-family: var(--secondary-font);
     text-align: center;
 }
-body{
-    font-family: Helvetica, Arial, sans-serif;
-    color: #473144;
-}
-h2{
-    color: #AF1B3F;
-}
-nav {   
-    border-top: 2px solid #EFC69B;
-    border-bottom: 2px solid #EFC69B;
-    text-align: end;
-    ;
-}
-nav li{
-    display: inline-flex;
-    margin: 0 1rem;
-}
-nav a{
-    font-weight: 600;
-    text-decoration: none;
-    color: #AF1B3F;
+
+hr {
+    color: var(--primary-color)
 }
 
-main{
-    display: grid;
+nav > ul {
+    display: flex;
+    justify-content: end;
+    margin: 15px;
+    border-top: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+    list-style: none;
 }
 
-article{
-    margin-top: 2rem;
+li {
+    margin: 15px;
+}
+
+.container {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 1fr;
 }
-article .review-column{
-    grid-column: 1/2;
+
+.article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 25px;
 }
-.review-column {
-    text-align: end;
-    border-right: 1px solid #EFC69B;
+
+.filter {
+    border: 1px solid var(--primary-color);
 }
-.review-column p{
-    margin-right: 20px;
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-.content-column{
-    grid-column: 2/3;
-    justify-items: center;
+
+.detail {
+    margin: 25px;
+    padding-right: 20px;
+    border-right: 1px solid var(--primary-color);
 }
-aside{
-    margin-top: 2rem;
-    grid-column: 3/4;
-    border: 1px solid #EFC69B;
+
+.detail p {
+    text-align: right;
+}
+
+/*change to book*/
+.book {
+    margin: 25px;
+    align-items: center;
 }
 
 .skiptocontent a {
+    margin: 25px;
+	background: var(--primary-color);
     position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-	background: #473144;
-    color: white;
 }
 .skiptocontent a:focus {
-	position: relative;
+	transform: translateY(0%);
 }
 
-footer {
-    border-top: 2px solid #EFC69B;
-    padding: 1rem;
-    text-align: center;
-}
-
-@media  (max-width: 800px) {
-    article{
-        grid-template-columns: 1fr;
-    }
-    .review-column, .content-column{
-        grid-column: auto;
-    }
-    aside{
-        grid-row: 1/2;
-        grid-column: auto;
-    }
-    
+.detail p:first-child {
+    font-size: 125%;
 }
