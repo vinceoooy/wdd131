@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Digital Monopoly Assistant - Site Plan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Casey Vince Pag-ong" />
+  <meta name="description" content="Site plan for Digital Monopoly Assistant." />
+  <link rel="stylesheet" href="styles/site-plan.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <header>
+    <h1>Digital Monopoly Assistant</h1>
+    <h2>Site Plan</h2>
+    <p>WDD 131 - Dynamic Web Fundamentals</p>
+    <p class="byline">By Casey Vince Pag-ong</p>
+  </header>
+
+  <main>
+
+    <section>
+      <h3>Overview</h3>
+
+      <h4>Site Name</h4>
+      <p>Digital Monopoly Assistant</p>
+
+      <h4>Purpose</h4>
+      <p>
+        The purpose of Digital Monopoly Assistant is to replace physical paper money and dice used in Monopoly games.
+        This web app makes gameplay faster and more convenient by providing digital dice rolling, player money tracking,
+        and a transaction history log to keep the game organized and fair.
+      </p>
+
+      <h4>Audience</h4>
+      <p>
+        This tool is designed for Monopoly players of all ages who play the physical board game and want a modern,
+        cleaner, and easy-to-use digital companion. It is especially helpful for families, students, and friend groups.
+      </p>
+    </section>
+
+    <!-- DYNAMIC ELEMENTS -->
+    <section>
+      <h3>Dynamic Elements (JavaScript)</h3>
+      <ul>
+        <li>Random dice roll with visual updates</li>
+        <li>Player cards created dynamically (starts with 2 players, Add Player button)</li>
+        <li>Player cards store: name, money, status</li>
+        <li>Editable money amounts with buttons</li>
+        <li>+200 button for passing GO</li>
+        <li>Transaction log that updates live</li>
+        <li>Conditional "Bankrupt" display if money <= 0</li>
+        <li>Players stored as objects inside an array</li>
+        <li>Array methods used for updates and rendering</li>
+        <li>Modules: dice.js, players.js, history.js, main.js</li>
+      </ul>
+    </section>
+
+    <!-- BRANDING -->
+    <section>
+      <h3>Branding</h3>
+
+      <h4>Logo</h4>
+      <p>Dice and dollar symbol combined — placeholder image below:</p>
+      <img src="images/dice.png" alt="Dice Icon Placeholder" class="logo" width="120">
+
+<h4>Color Palette</h4>
+
+<div class="palette-container">
+  <div class="swatch" style="background:#007AFF;">
+    <p>Primary Blue<br>#007AFF</p>
+  </div>
+  <div class="swatch" style="background:#0A0A23; color:white;">
+    <p>Dark Navy<br>#0A0A23</p>
+  </div>
+  <div class="swatch" style="background:#E5E5EA;">
+    <p>Light Gray<br>#E5E5EA</p>
+  </div>
+  <div class="swatch" style="background:#FFFFFF; border:1px solid #ccc;">
+    <p>White<br>#FFFFFF</p>
+  </div>
+  <div class="swatch" style="background:#00C46B;">
+    <p>Casino Green<br>#00C46B</p>
+  </div>
+</div>
+
+
+      <h4>Fonts</h4>
+      <p><strong>Poppins</strong> for headings + <strong>Inter</strong> for body text</p>
+    </section>
+
+    <!-- CONTENT -->
+    <section>
+      <h3>Content</h3>
+
+      <h4>Home Page</h4>
+      <p>Welcome message, logo, short instructions, Start Game button</p>
+
+      <h4>Game Page</h4>
+      <ul>
+        <li>Dice roller</li>
+        <li>Player cards (name + money + bankrupt state)</li>
+        <li>Add Player button</li>
+        <li>+200 GO button</li>
+        <li>History log</li>
+      </ul>
+    </section>
+
+    <!-- WIREFRAMES -->
+    <section>
+      <h3>Wireframes</h3>
+
+      <h4>Home Page Wireframe</h4>
+      <img src="images/Home.jpg" alt="Home wireframe placeholder" width="50%">
+
+      <h4>Game Page Wireframe</h4>
+      <img src="images/Child.jpg" alt="Game wireframe placeholder" width="50%">
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 — Casey Vince Pag-ong</p>
+  </footer>
+</body>
+</html>
