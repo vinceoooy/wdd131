@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game - Digital Monopoly Assistant</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <script type="module" src="scripts/main.js" defer></script>
+</head>
+<body>
+
+    <header class="toolbar">
+        <button class="btn small" id="add-player-btn">+ Add Player</button>
+        <div class="dice-area" id="dice-area">🎲 🎲</div>
+        <a class="btn small" href="index.html">Home</a>
+    </header>
+
+    <main class="game-area">
+        <section id="player-container" class="player-container"></section>
+
+    <section class="history">
+        <h3>Game Log</h3>
+        <ul id="log-list"></ul>
+    </section>
+    </main>
+    <div id="pay-bubble" class="bubble hidden">
+        <input type="number" id="bubble-input" min="1" value="50">
+        <button id="bubble-confirm">✓</button>
+    </div>
+
+
+    <footer>
+        <p>&copy; Vince Pag-ong</p>
+    </footer>
+
+</body>
+</html>
