@@ -161,7 +161,9 @@ main {
   align-items: center;
   z-index: 2000;
 }
-
+.modal p{
+  text-align: left;
+}
 .modal-content {
   background: white;
   padding: 1.5rem;
