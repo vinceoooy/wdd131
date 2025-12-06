@@ -4,6 +4,10 @@ import { setupEditing } from "./playersEdit.js";
 import { setupDragPay } from "./playersDragPay.js";
 import { setupGoPass } from "./playersDragGo.js";
 import { setupBankPay } from "./playersDragBank.js";
+import { enableTouchDrag } from "../touchDrag.js";
+
+
+
 
 export function createPlayer() {
   const player = createPlayerData();
@@ -47,6 +51,9 @@ export function renderPlayers() {
 
     setupEditing(nameEl, moneyEl, player);
     setupDragPay(card, player);
+
+    // 🔹 enable touch-drag AFTER the card exists
+    enableTouchDrag(card);
 
     container.appendChild(card);
   });

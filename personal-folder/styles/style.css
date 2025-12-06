@@ -8,6 +8,7 @@ body {
   font-family: "Inter", sans-serif;
   background: #ffffff;
   color: #0A0A23;
+  padding-bottom: 70px;
 }
 
 
@@ -89,6 +90,13 @@ main {
 .player-card:active {
   cursor: grabbing;
 }
+
+.player-card.dragging {
+  opacity: 0.6;
+  border: 2px dashed #007bff;
+}
+
+
 /* History Log */
 .history {
   margin-top: 2rem;
