@@ -85,6 +85,7 @@ main {
   padding: 0.5rem;
   text-align: center;
   cursor: grab;
+  touch-action: none;
 }
 
 .player-card:active {

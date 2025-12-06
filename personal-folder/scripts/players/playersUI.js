@@ -5,8 +5,7 @@ import { setupDragPay } from "./playersDragPay.js";
 import { setupGoPass } from "./playersDragGo.js";
 import { setupBankPay } from "./playersDragBank.js";
 import { enableTouchDrag } from "../touchDrag.js";
-
-
+import { setupTouchDropCheck } from "./playersMobileDrop.js";
 
 
 export function createPlayer() {
@@ -56,6 +55,7 @@ export function renderPlayers() {
     enableTouchDrag(card);
 
     container.appendChild(card);
+    enableTouchDrag(card, () => setupTouchDropCheck(player, card));
   });
 
   setupGoPass();
