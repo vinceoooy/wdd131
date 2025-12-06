@@ -83,8 +83,12 @@ main {
   border-radius: 8px;
   padding: 0.5rem;
   text-align: center;
+  cursor: grab;
 }
 
+.player-card:active {
+  cursor: grabbing;
+}
 /* History Log */
 .history {
   margin-top: 2rem;
@@ -125,6 +129,7 @@ main {
   gap: 0.3rem;
   align-items: center;
   z-index: 1000;
+  pointer-events: auto !important;
 }
 
 .bubble input {
@@ -159,6 +164,25 @@ main {
 
 .go-card:active {
   cursor: grabbing;
+}
+
+.bank-card {
+  width: 150px;
+  object-fit: cover;
+  border: 2px solid #E5E5EA;
+  border-radius: 8px;
+  margin: 1rem;
+  cursor: grab;
+  user-select: none;
+}
+
+.bank-card:active {
+  cursor: grabbing;
+}
+
+.player-card.drop-ready-bank {
+  outline: 3px solid #007AFF;
+  transition: outline 0.15s;
 }
 
 /* Drop highlight for GO card */

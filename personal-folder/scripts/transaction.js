@@ -1,5 +1,4 @@
 import { addLog } from "./history.js";
-
 const bubble = document.getElementById("pay-bubble");
 const input = document.getElementById("bubble-input");
 const confirmBtn = document.getElementById("bubble-confirm");

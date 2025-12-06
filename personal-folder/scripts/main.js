@@ -1,4 +1,4 @@
-import { createPlayer } from "./players.js";
+import { createPlayer } from "./players/playersUI.js";
 import { addLog } from "./history.js";
 import { rollDice } from "./dice.js";
 import "./transaction.js";
