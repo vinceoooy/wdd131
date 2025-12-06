@@ -11,26 +11,29 @@
 
     <header class="toolbar">
         <button class="btn small" id="add-player-btn">+ Add Player</button>
-        <div class="dice-area" id="dice-area">🎲 🎲</div>
+        <div class="dice-area" id="dice-area">
+        <img id="dice1" class="dice" src="images/dice6.png" alt="Dice 1">
+        <img id="dice2" class="dice" src="images/dice6.png" alt="Dice 2">
+        </div>
         <a class="btn small" href="index.html">Home</a>
     </header>
 
     <main class="game-area">
         <section id="player-container" class="player-container"></section>
+        <img id="go-card" class="go-card" src="images/passgo.jpg" alt="Pass GO card" draggable="true">
 
-    <section class="history">
-        <h3>Game Log</h3>
-        <ul id="log-list"></ul>
-    </section>
+        <section class="history">
+            <h3>Game Log</h3>
+            <ul id="log-list"></ul>
+        </section>
     </main>
     <div id="pay-bubble" class="bubble hidden">
         <input type="number" id="bubble-input" min="1" value="50">
         <button id="bubble-confirm">✓</button>
     </div>
 
-
     <footer>
-        <p>&copy; Vince Pag-ong</p>
+        <p>&copy; 2025 Digital Monopoly Assistant - WDD131 Vince Pag-ong</p>
     </footer>
 
 </body>

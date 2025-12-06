@@ -16,11 +16,33 @@ header, footer {
   padding: 1rem;
 }
 
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  padding: 0.75rem;
+  opacity: 0.6;
+}
+
+
 main {
   padding: 1.5rem;
   align-content: center;
   text-align: center;
 }
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
 
 .btn {
   display: block;
@@ -66,6 +88,8 @@ main {
 /* History Log */
 .history {
   margin-top: 2rem;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 .history ul {
@@ -89,4 +113,113 @@ main {
 .player-card.drop-ready {
   outline: 3px dashed #007AFF;
   transition: outline 0.2s;
+}
+
+.bubble {
+  position: absolute;
+  background: #ffffff;
+  border: 2px solid #007AFF;
+  border-radius: 8px;
+  padding: 0.4rem;
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  z-index: 1000;
+}
+
+.bubble input {
+  width: 60px;
+  padding: 0.25rem;
+  text-align: center;
+}
+
+.bubble button {
+  background: #00C46B;
+  border: none;
+  color: white;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.go-card {
+  width: 150px;
+  object-fit: cover;
+  border: 2px solid #E5E5EA;
+  border-radius: 8px;
+  margin: 1rem;
+  cursor: grab;
+  user-select: none;
+}
+
+.go-card:active {
+  cursor: grabbing;
+}
+
+/* Drop highlight for GO card */
+.player-card.drop-ready-go {
+  outline: 3px solid #00C46B;
+  transition: outline 0.15s;
+}
+
+.player-token {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+  margin: 0.75rem auto 0;
+}
+
+
+.dice-area {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.dice {
+  width: 60px;
+  height: 60px;
+  user-select: none;
+  transition: transform .2s;
+  border: 2px solid #E5E5EA;     
+  border-radius: 12px;         
+  background-color: #ffffff;    
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15); 
+}
+
+
+.dice.roll {
+  animation: rollDice .5s linear;
+}
+
+@keyframes rollDice {
+  0%   { transform: rotate(0deg); }
+  50%  { transform: rotate(360deg) scale(1.2); }
+  100% { transform: rotate(720deg); }
+}
+
+.money-update {
+  animation: pulseMoney 0.5s ease-out;
+}
+
+.money-update.increase {
+  color: #00A000;
+}
+
+.money-update.decrease {
+  color: #D00000;
+}
+
+@keyframes pulseMoney {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.35); }
+  100% { transform: scale(1); }
 }

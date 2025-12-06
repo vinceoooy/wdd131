@@ -1,6 +1,8 @@
 import { createPlayer } from "./players.js";
 import { addLog } from "./history.js";
 import { rollDice } from "./dice.js";
+import "./transaction.js";
+
 
 const addPlayerBtn = document.getElementById("add-player-btn");
 const diceArea = document.getElementById("dice-area");
@@ -13,7 +15,6 @@ addLog("Game Started!");
 
 addPlayerBtn.addEventListener("click", () => {
   createPlayer();
-  addLog("New player added.");
 });
 
 diceArea.addEventListener("click", () => {
