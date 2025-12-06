@@ -22,7 +22,7 @@ const tokenIcons = [
   "battleship.png"
 ];
 
-export function createPlayerData() {
+export function createPlayerData(selectedToken) {
   if (players.length >= 8) {
     addLog("Maximum players reached.");
     return null;
@@ -33,13 +33,14 @@ export function createPlayerData() {
     id: playerCount,
     name: `Player ${playerCount}`,
     money: 1500,
-    token: getNextAvailableToken()
+    token: selectedToken // 👈 use chosen token
   };
 
   players.push(player);
   addLog("New player added.");
   return player;
 }
+
 
 export function getPlayerById(id) {
   return players.find(p => p.id === id);
@@ -48,4 +49,12 @@ export function getPlayerById(id) {
 function getNextAvailableToken() {
   const usedTokens = players.map(p => p.token);
   return tokenIcons.find(token => !usedTokens.includes(token));
+}
+
+
+export function removePlayerData(id) {
+  const index = players.findIndex(p => p.id === id);
+  if (index !== -1) {
+    players.splice(index, 1);
+  }
 }
