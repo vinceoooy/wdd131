@@ -1,9 +1,10 @@
-// scripts/players/playersUI.js
+// playersUI.js
 import { createPlayerData, players, removePlayerData } from "./playersData.js";
 import { setupEditing } from "./playersEdit.js";
 import { setupDragPay } from "./playersDragPay.js";
 import { setupGoPass } from "./playersDragGo.js";
 import { setupBankPay } from "./playersDragBank.js";
+import { enableTouchDrag } from "./touchDrag.js";
 import { addLog } from "../history.js";
 
 export function createPlayer(selectedToken = null) {
@@ -24,7 +25,7 @@ export function renderPlayers() {
     // Remove button
     const removeBtn = document.createElement("button");
     removeBtn.className = "remove-player-btn";
-    removeBtn.textContent = "❌ ";
+    removeBtn.textContent = "❌";
     removeBtn.title = "Remove Player";
 
     removeBtn.addEventListener("click", () => {
@@ -33,19 +34,18 @@ export function renderPlayers() {
       renderPlayers();
     });
 
-    // Player name
+    // Name
     const nameEl = document.createElement("div");
     nameEl.className = "player-name";
     nameEl.textContent = player.name;
     nameEl.contentEditable = true;
 
-    // Player money
+    // Money
     const moneyEl = document.createElement("div");
     moneyEl.className = "player-money";
     moneyEl.textContent = `$${player.money}`;
     moneyEl.contentEditable = true;
 
-    // 💥 Money animation
     if (player.moneyChanged) {
       moneyEl.classList.add("money-update", player.moneyChanged);
       setTimeout(() => {
@@ -54,25 +54,32 @@ export function renderPlayers() {
       }, 600);
     }
 
-    // Token image
+    // Token
     const tokenEl = document.createElement("img");
     tokenEl.className = "player-token";
-    const safeToken = player.token ?? "thimble.png";
-    tokenEl.src = `images/tokens/${safeToken}`;
+    tokenEl.src = `images/tokens/${player.token}`;
     tokenEl.alt = `${player.name} token`;
-    tokenEl.onerror = () => {
-      tokenEl.src = "images/tokens/thimble.png";
-    };
 
-    // Build card UI
     card.append(removeBtn, nameEl, moneyEl, tokenEl);
 
+    // Enable desktop + touch drag for PLAYERS
     setupEditing(nameEl, moneyEl, player);
     setupDragPay(card, player);
+    enableTouchDrag(card, player);
 
     container.appendChild(card);
   });
 
+  // Desktop drag for GO + Bank
   setupGoPass();
   setupBankPay();
+
+  // -----------------------------------------
+  // 📱 Mobile Drag: enable for GO and BANK
+  // -----------------------------------------
+  const goCard = document.getElementById("go-card");
+  const bankCard = document.getElementById("bank-card");
+
+  if (goCard) enableTouchDrag(goCard, null);   // GO card drag support
+  if (bankCard) enableTouchDrag(bankCard, null); // Bank card drag support
 }

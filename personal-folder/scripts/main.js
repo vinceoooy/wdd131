@@ -1,4 +1,5 @@
-import { createPlayer } from "./players/playersUI.js";
+// main.js
+import { createPlayer, renderPlayers } from "./players/playersUI.js";
 import { addLog } from "./history.js";
 import { rollDice } from "./dice.js";
 import "./transaction.js";
@@ -11,6 +12,8 @@ const tokenModal = document.getElementById("token-modal");
 const tokenOptions = document.getElementById("token-options");
 const tokenClose = document.getElementById("token-close");
 
+// Load players instantly
+renderPlayers();                    // ← FIXED
 addLog("Game Ready! Add players to begin.");
 
 addPlayerBtn.addEventListener("click", () => {
@@ -33,6 +36,7 @@ tokenClose.addEventListener("click", () => {
   tokenModal.classList.add("hidden");
 });
 
+// Dice roll
 diceArea.addEventListener("click", () => {
   const result = rollDice();
   addLog(`Dice rolled: ${result[0]} + ${result[1]}`);
@@ -48,7 +52,7 @@ infoBtn.addEventListener("click", () => {
   infoModal.classList.remove("hidden");
 });
 
-// Close when pressing X
+// Close modal
 closeModalBtn.addEventListener("click", () => {
   infoModal.classList.add("hidden");
 });
@@ -57,3 +61,5 @@ closeModalBtn.addEventListener("click", () => {
 infoModal.addEventListener("click", (e) => {
   if (e.target === infoModal) infoModal.classList.add("hidden");
 });
+
+

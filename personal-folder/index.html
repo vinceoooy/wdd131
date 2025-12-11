@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Digital Monopoly Assistant</title>
   <link rel="stylesheet" href="styles/style.css" />
+  <script type="module" src="scripts/loadGame.js" defer></script>
+
 </head>
 <body>
   <div class="home-container">
@@ -14,12 +16,29 @@
     <p>A digital banking to enhance your Monopoly game night!</p>
 
     <a class="btn primary" href="game.html">Start New Game</a>
-    <a class="btn secondary" href="saved.html">Saved Games</a>
+    <button class="btn secondary" id="load-game-btn">Load Game</button>
+
 
     <footer>
       <p>&copy; 2025 Digital Monopoly Assistant - WDD131 Vince Pag-ong</p>
     </footer>
     
   </div>
+
+  <div id="load-modal" class="modal hidden">
+    <div class="modal-content">
+        <span id="load-close" class="close-modal">&times;</span>
+        <h2>Load Game</h2>
+
+        <p>Paste your saved game code below:</p>
+        <textarea id="load-input" placeholder="Paste save code here..."
+                  style="width:100%; height:120px; padding:10px; margin-top:10px;"></textarea>
+
+        <button id="confirm-load-btn" class="btn small" style="margin-top: 12px;">
+            Load Game
+        </button>
+    </div>
+  </div>
+
 </body>
 </html>

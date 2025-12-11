@@ -1,8 +1,8 @@
 // playersData.js
 import { addLog } from "../history.js";
 
-export let players = [];
-let playerCount = 0;
+export let players = JSON.parse(localStorage.getItem("players")) || [];
+let playerCount = players.length; // continue numbering after refresh
 
 export const bank = {
   id: 0,
@@ -22,6 +22,10 @@ const tokenIcons = [
   "battleship.png"
 ];
 
+export function savePlayers() {
+  localStorage.setItem("players", JSON.stringify(players));
+}
+
 export function createPlayerData(selectedToken) {
   if (players.length >= 8) {
     addLog("Maximum players reached.");
@@ -29,18 +33,34 @@ export function createPlayerData(selectedToken) {
   }
 
   playerCount++;
+
   const player = {
     id: playerCount,
     name: `Player ${playerCount}`,
     money: 1500,
-    token: selectedToken // 👈 use chosen token
+    token: selectedToken || getNextAvailableToken(),
+    moneyChanged: null
   };
 
   players.push(player);
+  savePlayers();
   addLog("New player added.");
+
   return player;
 }
 
+export function removePlayerData(id) {
+  players = players.filter(p => p.id !== id);
+  savePlayers();
+}
+
+export function updatePlayer(player) {
+  const index = players.findIndex(p => p.id === player.id);
+  if (index !== -1) {
+    players[index] = player;
+    savePlayers();
+  }
+}
 
 export function getPlayerById(id) {
   return players.find(p => p.id === id);
@@ -48,13 +68,5 @@ export function getPlayerById(id) {
 
 function getNextAvailableToken() {
   const usedTokens = players.map(p => p.token);
-  return tokenIcons.find(token => !usedTokens.includes(token));
-}
-
-
-export function removePlayerData(id) {
-  const index = players.findIndex(p => p.id === id);
-  if (index !== -1) {
-    players.splice(index, 1);
-  }
+  return tokenIcons.find(t => !usedTokens.includes(t));
 }

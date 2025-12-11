@@ -99,7 +99,7 @@ main {
 
 .btn.secondary {
   background: #FFFFFF;
-  color: #007A3D; /* deep green text */
+  color: #007A3D; 
   border: 2px solid #007A3D;
 }
 
@@ -149,6 +149,23 @@ main {
 
 .home-btn:hover {
   background: #004DA1;
+}
+
+.dragging-touch {
+  opacity: 0.7;
+  transform: scale(1.05);
+}
+.floating-drag {
+  border: 2px solid #007AFF;
+  border-radius: 8px;
+  transform: scale(1.03);
+}
+
+.save-under-home {
+  position: absolute;
+  top: 60px;       /* Slightly under the Home button */
+  left: 12px;      /* Same left alignment */
+  width: auto;
 }
 
 
