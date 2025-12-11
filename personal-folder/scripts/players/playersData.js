@@ -1,4 +1,3 @@
-// playersData.js
 import { addLog } from "../history.js";
 
 export let players = JSON.parse(localStorage.getItem("players")) || [];

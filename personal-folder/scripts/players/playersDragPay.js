@@ -1,4 +1,3 @@
-// playersDragPay.js
 import { players } from "./playersData.js";
 import { showPayBubble } from "../transaction.js";
 import { renderPlayers } from "./playersUI.js";
@@ -25,7 +24,7 @@ export function setupDragPay(card, player) {
 
     const sourcePlayer = players.find(p => p.id === sourceId);
 
-    // 💰 Show bubble and update money
+    // Show bubble and update money
     showPayBubble(sourcePlayer, player, card, (amount) => {
       sourcePlayer.money -= amount;
       player.money += amount;

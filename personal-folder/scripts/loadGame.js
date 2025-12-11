@@ -6,9 +6,7 @@ const closeBtn = document.getElementById("load-close");
 const confirmBtn = document.getElementById("confirm-load-btn");
 const input = document.getElementById("load-input");
 
-// -----------------------
 // Open & Close Modal
-// -----------------------
 loadBtn.addEventListener("click", () => {
     modal.classList.remove("hidden");
 });
@@ -21,9 +19,8 @@ modal.addEventListener("click", (e) => {
     if (e.target === modal) modal.classList.add("hidden");
 });
 
-// -----------------------
+
 // Load Game Logic
-// -----------------------
 confirmBtn.addEventListener("click", () => {
     const code = input.value.trim();
 

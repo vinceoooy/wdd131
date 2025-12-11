@@ -1,4 +1,3 @@
-// playersUI.js
 import { createPlayerData, players, removePlayerData } from "./playersData.js";
 import { setupEditing } from "./playersEdit.js";
 import { setupDragPay } from "./playersDragPay.js";
@@ -74,9 +73,7 @@ export function renderPlayers() {
   setupGoPass();
   setupBankPay();
 
-  // -----------------------------------------
-  // 📱 Mobile Drag: enable for GO and BANK
-  // -----------------------------------------
+  // Mobile Drag: enable for GO and BANK
   const goCard = document.getElementById("go-card");
   const bankCard = document.getElementById("bank-card");
 

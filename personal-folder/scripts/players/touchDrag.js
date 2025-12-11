@@ -1,4 +1,3 @@
-// touchDrag.js
 import { players, bank, savePlayers } from "./playersData.js";
 import { showPayBubble } from "../transaction.js";
 import { addLog } from "../history.js";
@@ -38,7 +37,7 @@ export function enableTouchDrag(card, player = null) {
     const touch = e.touches[0];
     startX = touch.clientX;
     startY = touch.clientY;
-    isDragging = false;   // <- tap unless moved
+    isDragging = false;   // tap unless moved
   });
 
   card.addEventListener("touchmove", (e) => {
@@ -50,7 +49,7 @@ export function enableTouchDrag(card, player = null) {
     // Only start dragging if moved more than 10px
     if (!isDragging && (dx > 10 || dy > 10)) {
       isDragging = true;
-      e.preventDefault(); // ← stop scroll only when dragging
+      e.preventDefault(); //stop scroll only when dragging
 
       const rect = card.getBoundingClientRect();
       clone = card.cloneNode(true);
@@ -72,15 +71,15 @@ export function enableTouchDrag(card, player = null) {
     }
 
     if (isDragging && clone) {
-      e.preventDefault(); // ← stop scroll only while dragging
+      e.preventDefault(); //stop scroll only while dragging
       moveClone(touch);
     }
   });
 
   card.addEventListener("touchend", (e) => {
 
-    // TAP → allow editing or delete button to work
-    if (!isDragging) return;  // ❗ fixes your problem
+    // TAP allow editing or delete button to work
+    if (!isDragging) return;  // fixes your problem
 
     // DRAG END
     if (!clone) return;
@@ -112,9 +111,7 @@ export function enableTouchDrag(card, player = null) {
   }
 }
 
-// ========================================================
 // PLAYER → PLAYER / GO / BANK
-// ========================================================
 function processPlayerDrop(player, x, y) {
   const elements = document.elementsFromPoint(x, y);
 
@@ -162,9 +159,7 @@ function processPlayerDrop(player, x, y) {
   }
 }
 
-// ========================================================
 // GO-PASS CARD → PLAYER
-// ========================================================
 function processGoCardDrop(x, y) {
   const elements = document.elementsFromPoint(x, y);
 
@@ -183,9 +178,7 @@ function processGoCardDrop(x, y) {
   updatePlayerMoneyDOM(player);
 }
 
-// ========================================================
 // BANK CARD → PLAYER
-// ========================================================
 function processBankCardDrop(x, y) {
   const elements = document.elementsFromPoint(x, y);
 

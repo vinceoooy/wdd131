@@ -1,4 +1,3 @@
-// playersEdit.js
 import { addLog } from "../history.js";
 import { renderPlayers } from "./playersUI.js";
 import { updatePlayer } from "./playersData.js";

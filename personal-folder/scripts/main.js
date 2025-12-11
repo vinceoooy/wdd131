@@ -1,4 +1,3 @@
-// main.js
 import { createPlayer, renderPlayers } from "./players/playersUI.js";
 import { addLog } from "./history.js";
 import { rollDice } from "./dice.js";
@@ -13,7 +12,7 @@ const tokenOptions = document.getElementById("token-options");
 const tokenClose = document.getElementById("token-close");
 
 // Load players instantly
-renderPlayers();                    // ← FIXED
+renderPlayers();                  
 addLog("Game Ready! Add players to begin.");
 
 addPlayerBtn.addEventListener("click", () => {

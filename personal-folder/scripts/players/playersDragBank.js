@@ -1,4 +1,3 @@
-// playersDragBank.js
 import { players, bank } from "./playersData.js";
 import { showPayBubble } from "../transaction.js";
 import { renderPlayers } from "./playersUI.js";
@@ -7,7 +6,7 @@ export function setupBankPay() {
   const bankCard = document.getElementById("bank-card");
   if (!bankCard) return;
 
-  // 📌 BANK → PLAYER
+  // BANK → PLAYER
   bankCard.addEventListener("dragstart", () => {
     bankCard.classList.add("dragging-bank");
   });
@@ -45,7 +44,7 @@ export function setupBankPay() {
     });
   });
 
-  // 📌 PLAYER → BANK
+  // PLAYER → BANK
   bankCard.addEventListener("dragover", (e) => {
     const sourceEl = document.querySelector(".dragging.player-card");
     if (!sourceEl) return;

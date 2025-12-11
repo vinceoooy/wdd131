@@ -1,4 +1,3 @@
-// playersDragGo.js
 import { players } from "./playersData.js";
 import { getPlayerById } from "./playersData.js";
 import { renderPlayers } from "./playersUI.js";

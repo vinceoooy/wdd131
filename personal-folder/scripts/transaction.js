@@ -1,4 +1,3 @@
-// transaction.js
 import { addLog } from "./history.js";
 
 const bubble = document.getElementById("pay-bubble");
@@ -45,7 +44,7 @@ function confirmPayment() {
   if (typeof callback === "function") {
     callback(amount);
 
-    // 🟢 After callback updates money, save updated players to localStorage
+    // After callback updates money, save updated players to localStorage
     import("./players/playersData.js").then(module => {
         const { savePlayers } = module;
         savePlayers();
