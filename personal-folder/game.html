@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Game - Digital Monopoly Assistant</title>
-  <link rel="stylesheet" href="styles/style.css" />
-  <script type="module" src="scripts/main.js" defer></script>
-  <script type="module" src="scripts/saveLoad.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Digital Monopoly Assistant - Game</title>
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/saveLoad.js" defer></script>
 </head>
 <body>
 
@@ -29,7 +29,9 @@
 
 
     <main class="game-area">
-        <section id="player-container" class="player-container"></section>
+        <section id="player-container" class="player-container">
+        <h2 class="hidden-title">Players</h2>
+        </section>
         <img id="go-card" class="go-card" src="images/passgo.jpg" alt="Pass GO card" draggable="true">
         <img id="bank-card" class="bank-card" draggable="true" src="images/bank.png" alt="Bank Card">
 
@@ -74,14 +76,14 @@
         <span id="token-close" class="close-modal">&times;</span>
         <h2>Select a Token</h2>
         <div id="token-options" class="token-grid">
-        <img src="images/tokens/car.png" data-token="car.png" class="token-choice">
-        <img src="images/tokens/dog.png" data-token="dog.png" class="token-choice">
-        <img src="images/tokens/top-hat.png" data-token="top-hat.png" class="token-choice">
-        <img src="images/tokens/thimble.png" data-token="thimble.png" class="token-choice">
-        <img src="images/tokens/iron.png" data-token="iron.png" class="token-choice">
-        <img src="images/tokens/shoe.png" data-token="shoe.png" class="token-choice">
-        <img src="images/tokens/battleship.png" data-token="battleship.png" class="token-choice">
-        <img src="images/tokens/wheelbarrow.png" data-token="wheelbarrow.png" class="token-choice">
+        <img src="images/tokens/car.png" data-token="car.png" class="token-choice" alt="Car token">
+        <img src="images/tokens/dog.png" data-token="dog.png" class="token-choice" alt="Dog token">
+        <img src="images/tokens/top-hat.png" data-token="top-hat.png" class="token-choice" alt="Top Hat token">
+        <img src="images/tokens/thimble.png" data-token="thimble.png" class="token-choice" alt="Thimble token">
+        <img src="images/tokens/iron.png" data-token="iron.png" class="token-choice" alt="Iron token">
+        <img src="images/tokens/shoe.png" data-token="shoe.png" class="token-choice" alt="Shoe token">
+        <img src="images/tokens/battleship.png" data-token="battleship.png" class="token-choice" alt="Battleship token">
+        <img src="images/tokens/wheelbarrow.png" data-token="wheelbarrow.png" class="token-choice" alt="Wheelbarrow token">
         </div>
     </div>
     </div>

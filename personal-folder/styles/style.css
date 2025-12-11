@@ -12,6 +12,10 @@ body {
   display: flex;
   flex-direction: column;
 }
+.logo {
+  width: 20%;
+}
+
 
 main {
   flex: 1;
@@ -222,6 +226,10 @@ main {
 
 .hidden {
   display: none !important;
+}
+.hidden-title {
+  position: absolute;
+  left: -9999px;
 }
 
 
